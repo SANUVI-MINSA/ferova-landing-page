@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferova — Vence la anemia con cada dosis</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="public/assets/images/Ferova.png">
+<link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="public/assets/images/Ferova.png" alt="Ferova" class="nav-logo-img">
+      <span class="nav-logo-text">Fer<span>ova</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#problema">El problema</a></li>
+      <li><a href="#funcionalidades">Funcionalidades</a></li>
+      <li><a href="#segmentos">Para quién</a></li>
+      <li><a href="#como">Cómo funciona</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#descargar" class="nav-cta">Descargar app</a>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#problema" class="mobile-link">El problema</a></li>
+    <li><a href="#funcionalidades" class="mobile-link">Funcionalidades</a></li>
+    <li><a href="#segmentos" class="mobile-link">Para quién</a></li>
+    <li><a href="#como" class="mobile-link">Cómo funciona</a></li>
+    <li><a href="#descargar" class="mobile-link mobile-cta">Descargar app</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+
+  <div class="hero-content reveal">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Sanuvi · Salud Digital en el Perú
+    </div>
+    <h1>Vence la <em>anemia</em><br>con cada dosis</h1>
+    <p class="hero-sub">Ferova conecta a madres y personal de salud del MINSA para asegurar que ningún niño abandone su tratamiento. Seguimiento real, gamificación y apoyo médico en tu bolsillo.</p>
+    <div class="hero-btns">
+      <a href="#descargar" class="btn-primary">
+        <i data-lucide="smartphone"></i> Descargar Ferova
+      </a>
+      <a href="#como" class="btn-secondary">
+        Cómo funciona <span class="btn-arrow">→</span>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div><span class="stat-num counter" data-target="43">0</span><span class="stat-num">%</span></div>
+        <span class="stat-label">niños con anemia en Perú</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div><span class="stat-num">1 de 3</span></div>
+        <span class="stat-label">abandona el tratamiento</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div><span class="stat-num">−10%</span></div>
+        <span class="stat-label">menos abandonos con Ferova</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal-right">
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-top">
+            <span>←</span>
+            <span>FerovaFamily</span>
+            <span>🔔</span>
+          </div>
+          <div class="phone-body">
+            <div class="phone-greeting">¡Hola María!</div>
+            <div class="phone-sub">Juntos por la salud de tus pequeños</div>
+            <div class="phone-card">
+              <div class="phone-card-title">Dosis de hoy</div>
+              <div class="phone-dose-time">⏰ Próxima: 08:00 AM</div>
+              <div class="phone-days">
+                <div class="day-dot day-done">L</div>
+                <div class="day-dot day-done">M</div>
+                <div class="day-dot day-done">M</div>
+                <div class="day-dot day-pending">J</div>
+                <div class="day-dot day-pending">V</div>
+                <div class="day-dot day-pending">S</div>
+                <div class="day-dot day-pending">D</div>
+              </div>
+              <button class="btn-confirm">✓ Confirmar Dosis</button>
+            </div>
+            <div class="phone-quick">
+              <div class="quick-title">Accesos Rápidos</div>
+              <div class="quick-item">
+                <div class="quick-icon">🍽️</div>
+                <div class="quick-text">
+                  <div class="quick-name">Diario Nutricional</div>
+                  <div class="quick-desc">Registra lo que comiste hoy</div>
+                </div>
+                <span class="quick-chevron">›</span>
+              </div>
+              <div class="quick-item">
+                <div class="quick-icon">📍</div>
+                <div class="quick-text">
+                  <div class="quick-name">Postas Cercanas</div>
+                  <div class="quick-desc">Encuentra tu centro de salud</div>
+                </div>
+                <span class="quick-chevron">›</span>
+              </div>
+              <div class="quick-item">
+                <div class="quick-icon">🏆</div>
+                <div class="quick-text">
+                  <div class="quick-name">Mis Logros</div>
+                  <div class="quick-desc">Revisa tus insignias</div>
+                </div>
+                <span class="quick-chevron">›</span>
+              </div>
+            </div>
+          </div>
+          <div class="phone-nav">
+            <div class="nav-icon active">🏠<br>Inicio</div>
+            <div class="nav-icon">📓<br>Diario</div>
+            <div class="nav-icon">📅<br>Citas</div>
+            <div class="nav-icon">💬<br>Consultas</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-card float-card-1">
+        <div class="float-icon"><i data-lucide="trophy"></i></div>
+        <div class="float-val">14 días</div>
+        <div class="float-lbl">racha activa</div>
+      </div>
+      <div class="float-card float-card-2">
+        <div class="float-icon"><i data-lucide="trending-up"></i></div>
+        <div class="float-val">Hb 11.2 g/dL</div>
+        <div class="float-lbl">mejorando</div>
+      </div>
+      <div class="float-card float-card-3">
+        <div class="float-icon"><i data-lucide="check-circle-2"></i></div>
+        <div class="float-val">3/3 dosis</div>
+        <div class="float-lbl">esta semana</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <p class="trust-label">En colaboración con</p>
+  <div class="trust-logos">
+    <div class="trust-item">MINSA</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">Gobierno del Perú</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">Postas de Salud</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">UPC</div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem" id="problema">
+  <div class="problem-inner">
+    <div class="section-label light reveal">El problema</div>
+    <h2 class="reveal">La anemia infantil sigue siendo<br>una crisis en el Perú</h2>
+    <p class="problem-sub reveal">Los programas de suplementación fracasan no por falta de medicamento, sino por la falta de seguimiento y acompañamiento del tratamiento.</p>
+    <div class="stats-grid">
+      <div class="stat-box reveal">
+        <div class="stat-box-icon"><i data-lucide="heart"></i></div>
+        <div><span class="stat-big counter" data-target="43">0</span><span class="stat-big">%</span></div>
+        <div class="stat-desc">de los niños menores de 3 años en el Perú presenta anemia (ENDES 2023)</div>
+      </div>
+      <div class="stat-box reveal">
+        <div class="stat-box-icon"><i data-lucide="alert-triangle"></i></div>
+        <div><span class="stat-big counter" data-target="80">0</span><span class="stat-big">%</span></div>
+        <div class="stat-desc">de las madres abandonan el tratamiento por efectos adversos y falta de información</div>
+      </div>
+      <div class="stat-box reveal">
+        <div class="stat-box-icon"><i data-lucide="calendar"></i></div>
+        <div><span class="stat-big">30</span></div>
+        <div class="stat-desc">días tarda el personal de salud en detectar que un paciente abandonó el tratamiento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="funcionalidades">
+  <div class="features-inner">
+    <div class="features-header reveal">
+      <div class="section-label">Funcionalidades</div>
+      <h2 class="section-title">Todo lo que necesitas<br>para vencer la anemia</h2>
+      <p class="section-sub">Ferova combina tecnología móvil, gamificación y conexión con el personal de salud del MINSA en una sola plataforma.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i data-lucide="pill"></i></div>
+        <h3>Registro diario de dosis</h3>
+        <p>Confirma la dosis de hierro cada día con un solo toque. Recordatorios inteligentes y segundo aviso si olvidas confirmar.</p>
+        <span class="feature-link">Saber más →</span>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i data-lucide="trophy"></i></div>
+        <h3>Gamificación del tratamiento</h3>
+        <p>Gana insignias, mantén rachas y desbloquea logros por cada día que cumplas el tratamiento. La constancia tiene recompensa.</p>
+        <span class="feature-link">Saber más →</span>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i data-lucide="utensils"></i></div>
+        <h3>Diario nutricional</h3>
+        <p>Registra los alimentos del día y la app calcula el hierro absorbido. Alertas si consumes inhibidores junto con la dosis.</p>
+        <span class="feature-link">Saber más →</span>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i data-lucide="message-circle"></i></div>
+        <h3>Teleconsulta con tu enfermera</h3>
+        <p>Envía preguntas directamente a la enfermera asignada. Respuestas en menos de 24 horas sin ir a la posta.</p>
+        <span class="feature-link">Saber más →</span>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i data-lucide="map-pin"></i></div>
+        <h3>Postas cercanas en mapa</h3>
+        <p>Encuentra las postas de salud más cercanas con su horario de atención y distancia desde tu ubicación actual.</p>
+        <span class="feature-link">Saber más →</span>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i data-lucide="bar-chart-2"></i></div>
+        <h3>Panel de enfermera en tiempo real</h3>
+        <p>Las enfermeras ven el semáforo de riesgo de cada paciente y detectan el abandono antes de que ocurra.</p>
+        <span class="feature-link">Saber más →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEGMENTS -->
+<section class="segments" id="segmentos">
+  <div class="segments-inner">
+    <div class="segments-header reveal">
+      <div class="section-label">Para quién es Ferova</div>
+      <h2 class="section-title">Dos apps, un mismo objetivo</h2>
+      <p class="section-sub" style="margin:0 auto">Cada segmento tiene su propia experiencia diseñada para sus necesidades específicas.</p>
+    </div>
+    <div class="segments-grid">
+      <div class="segment-card reveal">
+        <div class="segment-top">
+          <div class="segment-avatar">
+            <i data-lucide="users"></i>
+          </div>
+          <div class="segment-tag">FerovaFamily · Android</div>
+        </div>
+        <h3>Madres y Cuidadores</h3>
+        <p>Para madres de niños menores de 5 años con anemia y gestantes en control prenatal que necesitan acompañamiento diario en el tratamiento.</p>
+        <ul class="segment-features">
+          <li>Registro y confirmación de dosis diaria</li>
+          <li>Gamificación con rachas e insignias</li>
+          <li>Diario nutricional con cálculo de hierro</li>
+          <li>Teleconsulta con la enfermera asignada</li>
+          <li>Mapa de postas de salud cercanas</li>
+          <li>Historial de hemoglobina con gráfica</li>
+        </ul>
+        <a href="#descargar" class="segment-btn">Descargar FerovaFamily →</a>
+      </div>
+      <div class="segment-card segment-card-dark reveal">
+        <div class="segment-top">
+          <div class="segment-avatar avatar-dark">
+            <i data-lucide="stethoscope"></i>
+          </div>
+          <div class="segment-tag tag-dark">FerovaClinic · Flutter</div>
+        </div>
+        <h3>Personal de Salud MINSA</h3>
+        <p>Para enfermeras, nutricionistas y coordinadores de postas de salud que necesitan monitorear la adherencia de sus pacientes en tiempo real.</p>
+        <ul class="segment-features">
+          <li>Panel de pacientes con semáforo de riesgo</li>
+          <li>Score de predicción de abandono</li>
+          <li>Registro de controles de hemoglobina</li>
+          <li>Respuesta a teleconsultas con plantillas</li>
+          <li>Dashboard analítico distrital (Admin)</li>
+          <li>Exportación de reportes para el MINSA</li>
+        </ul>
+        <a href="#descargar" class="segment-btn segment-btn-dark">Acceder a FerovaClinic →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="como">
+  <div class="how-inner">
+    <div class="how-header reveal">
+      <div class="section-label">Cómo funciona</div>
+      <h2 class="section-title">Simple para la madre,<br>poderoso para la enfermera</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h4>La madre se registra</h4>
+        <p>Crea su perfil y el de su hijo en menos de 2 minutos. La enfermera la asigna en la posta de salud.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h4>La enfermera asigna el tratamiento</h4>
+        <p>Define la dosis diaria, la duración y los controles de hemoglobina programados.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h4>Ferova acompaña cada día</h4>
+        <p>Recordatorios, registro de dosis, diario nutricional y gamificación para mantener la constancia.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <h4>La enfermera monitorea en tiempo real</h4>
+        <p>Ve quién cumple, quién está en riesgo y actúa antes de que el abandono ocurra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <div class="testimonials-header reveal">
+      <div class="section-label">Testimonios</div>
+      <h2 class="section-title">Lo que dicen nuestros usuarios</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p>Antes siempre olvidaba darle el hierro a mi hijo. Con Ferova recibo el recordatorio y puedo confirmar la dosis desde mi celular. ¡Ya llevamos 3 meses sin fallar!</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MC</div>
+          <div>
+            <div class="testimonial-name">María C.</div>
+            <div class="testimonial-role">Madre · San Juan de Lurigancho</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p>El panel de semáforo me permite ver de un vistazo quién necesita atención urgente. Antes tardaba semanas en enterarme de un abandono, ahora lo sé al día siguiente.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RT</div>
+          <div>
+            <div class="testimonial-name">Lic. Rosa T.</div>
+            <div class="testimonial-role">Enfermera · Posta La Victoria</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p>Los logros y las rachas hacen que mi niña quiera tomar su hierro ella sola. Ya ganó 5 insignias y presume de su racha de 21 días. La gamificación realmente funciona.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PM</div>
+          <div>
+            <div class="testimonial-name">Patricia M.</div>
+            <div class="testimonial-role">Madre · Villa El Salvador</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="descargar">
+  <div class="cta-orb"></div>
+  <div class="cta-inner reveal">
+    <div class="cta-badge">
+      <i data-lucide="zap"></i> Disponible ahora
+    </div>
+    <h2>Empieza hoy el camino<br>hacia la salud</h2>
+    <p>Descarga Ferova y únete a las familias que están venciendo la anemia con el apoyo del personal de salud del MINSA.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-white">
+        <i data-lucide="smartphone"></i> Descargar FerovaFamily
+      </a>
+      <a href="#" class="btn-outline-white">
+        <i data-lucide="stethoscope"></i> Soy personal de salud
+      </a>
+    </div>
+    <p class="cta-note">Gratis · Sin tarjeta de crédito · Disponible en Android</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="public/assets/images/Ferova.png" alt="Ferova" class="footer-logo-img">
+        <p>Plataforma móvil integral para el seguimiento del tratamiento de anemia materno-infantil en el Perú. Desarrollada por Sanuvi.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#funcionalidades">Funcionalidades</a></li>
+          <li><a href="#segmentos">Para quién</a></li>
+          <li><a href="#como">Cómo funciona</a></li>
+          <li><a href="#descargar">Descargar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre Sanuvi</a></li>
+          <li><a href="#">El equipo</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Términos de servicio</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sanuvi. Todos los derechos reservados.</span>
+      <span>Hecho en el Perú</span>
+    </div>
+  </div>
+</footer>
+
+
+
+<button class="scroll-top" id="scrollTop" aria-label="Volver arriba">↑</button>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="public/js/main.js"></script>
+</body>
+</html>
