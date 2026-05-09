@@ -21,3 +21,11 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('open', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
 });
+
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
