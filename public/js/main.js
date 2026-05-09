@@ -87,3 +87,19 @@ document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el))
 // ── Active nav link on scroll ──
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.style.color = '';
+        const href = link.getAttribute('href');
+        if (href === `#${entry.target.id}`) {
+          link.style.color = 'var(--crimson)';
+        }
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => sectionObserver.observe(s));
