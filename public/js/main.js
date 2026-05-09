@@ -83,3 +83,7 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.6 });
 
 document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+// ── Active nav link on scroll ──
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
