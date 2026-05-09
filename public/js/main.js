@@ -29,3 +29,6 @@ document.querySelectorAll('.mobile-link').forEach(link => {
     document.body.style.overflow = '';
   });
 });
+
+// ── Scroll reveal ──
+const STAGGER_PARENTS = ['features-grid', 'stats-grid', 'testimonials-grid', 'steps', 'segments-grid'];
