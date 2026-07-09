@@ -7,6 +7,137 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="public/assets/images/Ferova.png">
 <link rel="stylesheet" href="public/css/styles.css">
+<style>
+/* ===== Modal de acceso FerovaClinic ===== */
+.clinic-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 14, 20, 0.72);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+.clinic-modal-overlay.active { display: flex; animation: cmFade .25s ease; }
+@keyframes cmFade { from { opacity: 0; } to { opacity: 1; } }
+
+.clinic-modal {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 440px;
+  width: 100%;
+  padding: 36px 32px 28px;
+  position: relative;
+  font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 24px 64px rgba(0,0,0,.35);
+  animation: cmUp .3s ease;
+}
+@keyframes cmUp { from { transform: translateY(16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.clinic-modal-close {
+  position: absolute;
+  top: 14px; right: 16px;
+  border: none; background: none;
+  font-size: 22px; cursor: pointer;
+  color: #7a828c; line-height: 1;
+}
+.clinic-modal-icon {
+  width: 54px; height: 54px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0f1b2d, #24405f);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.clinic-modal h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin: 0 0 8px;
+  color: #101828;
+}
+.clinic-modal p.cm-desc {
+  font-size: 14.5px;
+  color: #5b6572;
+  line-height: 1.55;
+  margin: 0 0 20px;
+}
+.clinic-modal label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #35404d;
+  margin-bottom: 8px;
+}
+.clinic-modal input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1.5px solid #d6dce3;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: .12em;
+  outline: none;
+  transition: border-color .2s;
+}
+.clinic-modal input:focus { border-color: #24405f; }
+.clinic-modal input.cm-error { border-color: #d92d20; }
+.cm-error-msg {
+  display: none;
+  color: #d92d20;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.cm-error-msg.visible { display: block; }
+.clinic-modal .cm-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #0f1b2d;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+}
+.clinic-modal .cm-btn:hover { background: #24405f; transform: translateY(-1px); }
+.cm-note {
+  margin-top: 16px;
+  font-size: 12.5px;
+  color: #8a93a0;
+  line-height: 1.5;
+  text-align: center;
+}
+.cm-success {
+  display: none;
+  text-align: center;
+  padding: 10px 0 4px;
+}
+.cm-success.visible { display: block; }
+.cm-success .cm-check {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #e8f7ef;
+  color: #12965a;
+  font-size: 28px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 14px;
+}
+.cm-success h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin: 0 0 6px;
+  color: #101828;
+}
+.cm-success p { font-size: 14px; color: #5b6572; margin: 0; }
+</style>
 </head>
 <body>
 
@@ -56,7 +187,7 @@
     <h1>Vence la <em>anemia</em><br>con cada dosis</h1>
     <p class="hero-sub">Ferova conecta a madres y personal de salud del MINSA para asegurar que ningún niño abandone su tratamiento. Seguimiento real, gamificación y apoyo médico en tu bolsillo.</p>
     <div class="hero-btns">
-      <a href="#descargar" class="btn-primary">
+      <a href="public/downloads/Ferova_Family.apk" download="Ferova_Family.apk" class="btn-primary">
         <i data-lucide="smartphone"></i> Descargar Ferova
       </a>
       <a href="#como" class="btn-secondary">
@@ -279,7 +410,7 @@
           <li>Mapa de postas de salud cercanas</li>
           <li>Historial de hemoglobina con gráfica</li>
         </ul>
-        <a href="#descargar" class="segment-btn">Descargar FerovaFamily →</a>
+        <a href="public/downloads/Ferova_Family.apk" download="Ferova_Family.apk" class="segment-btn">Descargar FerovaFamily →</a>
       </div>
       <div class="segment-card segment-card-dark reveal">
         <div class="segment-top">
@@ -298,7 +429,7 @@
           <li>Dashboard analítico distrital (Admin)</li>
           <li>Exportación de reportes para el MINSA</li>
         </ul>
-        <a href="#descargar" class="segment-btn segment-btn-dark">Acceder a FerovaClinic →</a>
+        <a href="#" class="segment-btn segment-btn-dark clinic-access-trigger">Acceder a FerovaClinic →</a>
       </div>
     </div>
   </div>
@@ -435,10 +566,10 @@
     <h2>Empieza hoy el camino<br>hacia la salud</h2>
     <p>Descarga Ferova y únete a las familias que están venciendo la anemia con el apoyo del personal de salud del MINSA.</p>
     <div class="cta-btns">
-      <a href="#" class="btn-white">
+      <a href="public/downloads/Ferova_Family.apk" download="Ferova_Family.apk" class="btn-white">
         <i data-lucide="smartphone"></i> Descargar FerovaFamily
       </a>
-      <a href="#" class="btn-outline-white">
+      <a href="#" class="btn-outline-white clinic-access-trigger">
         <i data-lucide="stethoscope"></i> Soy personal de salud
       </a>
     </div>
@@ -493,11 +624,104 @@
   </div>
 </footer>
 
+<!-- MODAL: Acceso FerovaClinic -->
+<div class="clinic-modal-overlay" id="clinicModal" role="dialog" aria-modal="true" aria-labelledby="clinicModalTitle">
+  <div class="clinic-modal">
+    <button class="clinic-modal-close" id="clinicModalClose" aria-label="Cerrar">✕</button>
 
+    <div id="clinicModalForm">
+      <div class="clinic-modal-icon"><i data-lucide="shield-check"></i></div>
+      <h3 id="clinicModalTitle">Acceso restringido</h3>
+      <p class="cm-desc">FerovaClinic es de uso exclusivo para el personal de salud autorizado. Ingresa el código de acceso institucional entregado por tu posta de salud o coordinador distrital.</p>
+      <label for="clinicCode">Código de acceso</label>
+      <input type="password" id="clinicCode" placeholder="••••••••" autocomplete="off">
+      <p class="cm-error-msg" id="clinicError">Código incorrecto. Verifica con tu coordinador de posta.</p>
+      <button class="cm-btn" id="clinicSubmit">Verificar y descargar</button>
+      <p class="cm-note">¿No tienes un código? Solicítalo al coordinador de tu establecimiento de salud o escríbenos a soporte@sanuvi.pe</p>
+    </div>
+
+    <div class="cm-success" id="clinicSuccess">
+      <div class="cm-check">✓</div>
+      <h4>Acceso verificado</h4>
+      <p>La descarga de FerovaClinic comenzará en unos segundos…</p>
+    </div>
+  </div>
+</div>
 
 <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">↑</button>
 
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script src="public/js/main.js"></script>
+<script>
+/* ===== Descarga con verificación de FerovaClinic ===== */
+(function () {
+  var CLINIC_APK = 'public/downloads/Ferova_Clinic.apk';
+  // Código de acceso institucional (cámbialo por el que entregarás al personal).
+  // Nota: al validarse en el navegador, es un filtro formal, no seguridad absoluta.
+  var ACCESS_CODE = 'MINSA2026';
+
+  var modal = document.getElementById('clinicModal');
+  var closeBtn = document.getElementById('clinicModalClose');
+  var input = document.getElementById('clinicCode');
+  var errorMsg = document.getElementById('clinicError');
+  var submitBtn = document.getElementById('clinicSubmit');
+  var formView = document.getElementById('clinicModalForm');
+  var successView = document.getElementById('clinicSuccess');
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    formView.style.display = 'block';
+    successView.classList.remove('visible');
+    input.value = '';
+    input.classList.remove('cm-error');
+    errorMsg.classList.remove('visible');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { input.focus(); }, 100);
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function startDownload() {
+    var a = document.createElement('a');
+    a.href = CLINIC_APK;
+    a.download = 'Ferova_Clinic.apk';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  function verify() {
+    if (input.value.trim() === ACCESS_CODE) {
+      formView.style.display = 'none';
+      successView.classList.add('visible');
+      setTimeout(startDownload, 800);
+      setTimeout(closeModal, 3200);
+    } else {
+      input.classList.add('cm-error');
+      errorMsg.classList.add('visible');
+      input.select();
+    }
+  }
+
+  document.querySelectorAll('.clinic-access-trigger').forEach(function (btn) {
+    btn.addEventListener('click', openModal);
+  });
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+  submitBtn.addEventListener('click', verify);
+  input.addEventListener('keydown', function (e) { if (e.key === 'Enter') verify(); });
+  input.addEventListener('input', function () {
+    input.classList.remove('cm-error');
+    errorMsg.classList.remove('visible');
+  });
+
+  if (window.lucide) lucide.createIcons();
+})();
+</script>
 </body>
 </html>
